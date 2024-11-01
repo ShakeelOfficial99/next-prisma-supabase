@@ -14,6 +14,37 @@ pnpm dev
 bun dev
 ```
 
+
+
+```
+Prisma Setup
+
+npm install @prisma/client
+
+npx prisma init
+
+-> it will create prisma folder and added .env in the env we add the connection string 
+go to subabase
+
+project settings 
+database
+
+copy the url and add in the env database_url and add the password in the square brackets.
+
+
+then add a model in the schema.prisma 
+
+model Todo {
+  id Int @id @default(autoincrement())
+  title String
+}
+
+then run 
+
+npx prisma migrate dev --name init 
+
+```
+
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
 You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
